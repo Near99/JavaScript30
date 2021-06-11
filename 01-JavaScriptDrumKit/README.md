@@ -1,7 +1,7 @@
 # Learning Outcoms
 
-1. "<kbd>" tag can be used as a span of inline text denoting textual user input from a keyboard.
-2. "<audio>" element is used to embed sound content in documents. Learn more about audio usage on MDN Web Docs.
+1. kbd tag can be used as a span of inline text denoting textual user input from a keyboard. like: press ctrl<kbd>ctrl</kbd>
+2. audio element is used to embed sound content in documents. Learn more about audio usage on MDN Web Docs.
 3. play() method can be used to begin playback of the media.
 4. currentTime method specifies the current playback time in seconds.
 5. Although NodeList is not an Array, it is possible to iterate over it with forEach().
