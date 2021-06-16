@@ -140,15 +140,15 @@
         'car',
         'truck',
       ];
-      const sum = data.reduce((accm, items) => {
+      const sum = data.reduce((accm, item) => {
         // objSyntax: objName = {property: value};
         // access object value: objName[property] or objName.property.
         // when the property doesn't exist, create one.
         // if the property exists, counter++;
-        if (!accm[items]) {
-          accm[items] = 0;
+        if (!accm[item]) {
+          accm[item] = 0;
         }
-        accm[items]++;
+        accm[item]++;
         return accm;
       }, {});
       console.log(sum);
