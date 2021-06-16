@@ -10,9 +10,8 @@
 
 5. <code>Array.sort()</code> sorts array elements in place and return sorted array. The default sort pattern will convert all elements of an array to <code>strings</code> and sorting in ascending order.
    If <code>compareFunction</code> is supplied, sorting order is according to compare function's return value.
-   <code>compareFunction(a, b)</code>, when return value is > 0, sort b before a. when return value is <= 0, it will keep a and b in the same order.
-
-Notes: <code>sort()</code> method won't create new array.
+   <code>compareFunction(a, b)</code>, when return value is > 0, sort b before a. when return value is <= 0, it will keep a and b in the same order. 
+   Notes: <code>sort()</code> method won't create new array.
 
 6. <code>Array.reduce()</code> takes a callback function. the return value is assigned to the accumulator, whose value is recorded across each loop. the fianl will be returned when iteration is done.
 
