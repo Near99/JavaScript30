@@ -26,7 +26,7 @@ checkBoxes.forEach((checkBox) => {
 });
 ```
 
-3. Then the big part <code>handleCheck()</code> function. First thing to do it's to set <code>lastCheck</code> to the checkbox element that is clicked.
+3. Then the big part <code>handleCheck()</code> function. First thing to do it's to set <code>lastCheck</code> to the checkbox element that is clicked (explained later).
 
 ```js
 function handleCheck(e) {
@@ -34,7 +34,7 @@ function handleCheck(e) {
 }
 ```
 
-4. If another element is clicked with <code>shift</code> key down, iterate all <code>input</code> elements again.
+4. If another element is clicked with <kbd>shift</kbd> key down, iterate all <code>input</code> elements again.
 
 ```js
 function handleCheck(e) {
@@ -69,7 +69,7 @@ if (checkBox === lastCheck || checkBox === this) {
 }
 ```
 
-8. If <code>isBetween</code> is truthly, check the checkbox(es). The code looks like this:
+8. If <code>isBetween</code> is truthly, check the checkbox(es). The complete code looks like this:
 
 ```js
 function handleCheck(e) {
@@ -90,7 +90,7 @@ function handleCheck(e) {
 
 # What Happends Actually?
 
-1. When we first click one checkbox for example the second box is checked:
+1. When one of the checkboxes is clicked, for example the second one:
 
 - [ ] This is an inbox laytou.
 - [x] Check one item
@@ -101,13 +101,13 @@ function handleCheck(e) {
 - [ ] Good Luck!
 - [ ] Don't forget to tweet your result!
 
-2. <code>'click'</code> event is fired and handleCheck is called. Because we didn't press <code>Shift</code> key. <code>if</code> statement is not satisfied, it is then being skipped. Therefore <code>lastCheck</code> is set to the second checkbox
+2. <code>'click'</code> event is fired and handleCheck is called. Because we didn't press <kbd>Shift</kbd> key. <code>if (e.shiftKey && this.checked)</code> statement is not satisfied, it is then being skipped. Only <code>lastCheck</code> is set to the second checkbox.
 
 ```js
 lastCheck = <secondCheckBox>
 ```
 
-3. Then we click fifth checkbox with <code>Shift</code> key pressed down
+3. Then we click fifth checkbox with <kbd>Shift</kbd> key pressed down
 
 - [ ] This is an inbox laytou.
 - [x] Check one item
@@ -118,7 +118,7 @@ lastCheck = <secondCheckBox>
 - [ ] Good Luck!
 - [ ] Don't forget to tweet your result!
 
-4. <code>if (e.shiftKey && this.checked)</code> is satisfied after second click. Then the loop begins.
+4. <code>if (e.shiftKey && this.checked)</code> is satisfied now. Then the loop begins.
 
 5. When it goes to the second checkbox, <code>if (checkBox === lastCheck || checkBox === this)</code> is triggered, and <code>isBetween</code> is set to <code>true</code>.
 
